@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../config/firebase-config";
+import { auth, db } from "../../config/firebase-config";
+import { collection } from "firebase/firestore";
 
-export const Signup = () => {
+export const Test = () => {
+  const [userNickname, setUserNickname] = useState("");
   const [registerEmail, setRegisterEmail] = useState("");
   const [confirmRegisterEmail, setConfirmRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
   const [confirmRegisterPassword, setConfirmRegisterPassword] = useState("");
+  const usersCollectionRef = collection(db, "users");
 
   const register = async () => {
     try {
@@ -15,9 +18,9 @@ export const Signup = () => {
         registerEmail,
         registerPassword
       );
-      alert("Cadastro efetivado com sucesso");
+      console.log(user);
     } catch (err) {
-      alert("Cadastro não efetuado")
+      alert("Cadastro não efetuado");
       console.log(err.message);
     }
   };
@@ -33,20 +36,28 @@ export const Signup = () => {
   };
 
   return (
-    <div class="container">
-      <div class="main-logo">
+    <div className="container">
+      <div className="main-logo">
         Anonymatus
-        <i class="fa-solid fa-user-secret"></i>
+        <i className="fa-solid fa-user-secret"></i>
       </div>
       <section>Cadastro</section>
-      <div class="container-signup">
-        <div className="form">
-          <div class="user-input">
-            {/*<span class="signup-identifier">Nickname</span>
+      <div className="container-signup">
+        <div classNameName="form">
+          <div className="user-input">
+            <label className="signup-identifier">Nickname</label>
             <br />
-            <input type="text" name="username" id="username" required />
-            <br />*/}
-            <span class="signup-identifier">E-mail</span>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              onChange={(event) => {
+                setUserNickname(event.target.value);
+              }}
+              required
+            />
+            <br />
+            <label className="signup-identifier">E-mail</label>
             <br />
             <input
               type="email"
@@ -58,7 +69,7 @@ export const Signup = () => {
               required
             />
             <br />
-            <span class="signup-identifier">Confirmar e-mail</span>
+            <label className="signup-identifier">Confirmar e-mail</label>
             <br />
             <input
               type="email"
@@ -70,7 +81,7 @@ export const Signup = () => {
               required
             />
             <br />
-            <span class="signup-identifier">Senha</span>
+            <label className="signup-identifier">Senha</label>
             <br />
             <input
               type="password"
@@ -82,7 +93,7 @@ export const Signup = () => {
               }}
             />
             <br />
-            <span class="signup-identifier">Confirmar senha</span>
+            <label className="signup-identifier">Confirmar senha</label>
             <br />
             <input
               type="password"
@@ -95,7 +106,11 @@ export const Signup = () => {
             />
             <br />
           </div>
-          <button class="submit-btn" id="submit-btn" onClick={confirmRegister}>
+          <button
+            className="submit-btn"
+            id="submit-btn"
+            onClick={confirmRegister}
+          >
             Enviar
           </button>
         </div>

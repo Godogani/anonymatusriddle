@@ -23,19 +23,18 @@
     text-align: left;
 }
 
-.container-signup label {
+.container-signup span {
     color: #1cda2b;
-  
 }
 
 .user-input input {
     width: 350px;
-    background: transparent;
-    color: #00ff00;
+    background: #ffffffc0;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(17.5px);
+    -webkit-backdrop-filter: blur(17.5px);
     border-radius: 10px;
-    border: 1px solid #00ff00;
-    font-size: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     padding: 8px 16px;
 }
 
@@ -58,9 +57,7 @@
     color: #000;
     border: 1px solid#000;
 }
-.user-input input:focus ~ label{
-    
-}
+
 .main {
     font-size: 100px;
     color: #fff;

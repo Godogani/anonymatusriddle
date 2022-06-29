@@ -26,7 +26,7 @@ export const Login = () => {
       <div className="container-signup">
         <div className="form">
           <div className="user-input">
-            <label className="signup-identifier"> E-mail </label> <br />
+            <span className="signup-identifier"> E-mail </span> <br />
             <input
               type="email"
               name="user-email"
@@ -36,7 +36,7 @@ export const Login = () => {
               }}
             />
             <br />
-            <label className="signup-identifier"> Senha </label> <br />
+            <span className="signup-identifier"> Senha </span> <br />
             <input
               type="password"
               name="password"
