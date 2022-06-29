@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./login.css";
 import { auth } from "../../config/firebase-config";
-import { signInWithEmailAndPassword, signOut } from "firebase/auth";
-
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 export const Login = () => {
   const [loginEmail, setLoginEmail] = useState("");
@@ -16,9 +15,6 @@ export const Login = () => {
     }
   };
 
-  const logOut = async () => {
-    await signOut(auth);
-  };
   return (
     <div className="container">
       <div className="main-logo">
@@ -52,7 +48,6 @@ export const Login = () => {
           <button className="submit-btn" id="submit-btn" onClick={login}>
             Log In
           </button>
-          <button onClick={logOut}>Sign Out</button>
         </div>{" "}
       </div>{" "}
     </div>
