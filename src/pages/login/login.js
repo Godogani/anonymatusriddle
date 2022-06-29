@@ -10,8 +10,10 @@ export const Login = () => {
     try {
       const user = signInWithEmailAndPassword(auth, loginEmail, loginPassword);
       console.log(user);
+      alert("Usuário Logado")
     } catch (err) {
       console.log(err.message);
+      alert("Erro ao logar")
     }
   };
 

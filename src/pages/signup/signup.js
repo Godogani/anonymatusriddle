@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../config/firebase-config";
 
-
 export const Signup = () => {
   const [registerEmail, setRegisterEmail] = useState("");
   const [confirmRegisterEmail, setConfirmRegisterEmail] = useState("");
@@ -16,8 +15,9 @@ export const Signup = () => {
         registerEmail,
         registerPassword
       );
-      console.log(user);
+      alert("Cadastro efetivado com sucesso");
     } catch (err) {
+      alert("Cadastro não efetuado")
       console.log(err.message);
     }
   };
@@ -42,10 +42,10 @@ export const Signup = () => {
       <div class="container-signup">
         <div className="form">
           <div class="user-input">
-            <span class="signup-identifier">Nickname</span>
+            {/*<span class="signup-identifier">Nickname</span>
             <br />
             <input type="text" name="username" id="username" required />
-            <br />
+            <br />*/}
             <span class="signup-identifier">E-mail</span>
             <br />
             <input

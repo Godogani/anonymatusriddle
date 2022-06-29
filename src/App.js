@@ -5,6 +5,7 @@ import {Home} from "./pages/home/home";
 import {Login} from "./pages/login/login";
 import {Signup} from "./pages/signup/signup.js"
 import {Leaderboard} from "./pages/leaderboard/leaderboard";
+import {List} from "./pages/list/list"
 
 function App() {
  
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/leaderboard" component={Leaderboard} />
+        <Route exact path="/list" component={List} />
       </Switch>
     </div>
   </BrowserRouter>

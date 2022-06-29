@@ -1,0 +1,43 @@
+.box {
+    display: flex;
+    justify-content: center;
+}
+
+.user-grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    background-color: #1f1f1f;
+    color: #fff;
+    width: 100%;
+}
+.grid-title{
+    font-size: 20px;
+    background-color: #000;
+    color: #fff;
+    padding: 8px 16px;
+}
+.grid-item {
+    display: flex;
+    margin-left: 15px;
+    padding-bottom: 5px;
+}
+.grid-item button,
+.grid-item input{
+    margin-right: 10px;
+    border: 2px solid #1cda2b;
+    background-color: transparent;
+    text-align: center;
+    font-size: 16px;
+    color: #1cda2b;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 8px 16px;
+}
+.grid-item button:hover {
+    cursor: pointer;
+    background-color: #1cda2b;
+    color: #000;
+    border: 1px solid#000;
+}

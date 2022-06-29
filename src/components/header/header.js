@@ -23,11 +23,12 @@ export const Header = () => {
         Anonymatus
         <i className="fa-solid fa-user-secret"></i>
       </div>
-      <a href="#" className="toggle-btn">
+      {/*  <a href="#" className="toggle-btn">
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>
       </a>
+      */}
       <div className="navbar-links">
         <ul>
           <li>
