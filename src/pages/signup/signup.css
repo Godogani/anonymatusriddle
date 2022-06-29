@@ -33,7 +33,6 @@
 }
 
 .container-signup #submit-btn {
-    display: flex;
     border: 2px solid #1cda2b;
     background-color: transparent;
     text-align: center;

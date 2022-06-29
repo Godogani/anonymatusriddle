@@ -1,15 +1,27 @@
-import React, {Link} from 'react';
+import React from "react";
+import {Link} from "react-router-dom";
+import './home.css'
 
 
-export const Home = () =>{
-    return(
-        <div className="container">
-        <span className="main-logo">Anonymatus
+export const Home = () => {
+  return (
+    <div className="container">
+      <span className="main-logo">
+        Anonymatus
         <i className="fa-solid fa-user-secret"></i>
       </span>
-        <a href="login/login.html " className="login">Log In</a>
-        <a href="signup/signup.html " className="signup">Sign Up</a>
+      <Link to="/login" className="btn">
+        <p
+        >
+          Login
+        </p>
+      </Link>
+      <Link to="/signup" className="btn">
+        <p
+        >
+          Signup
+        </p>
+      </Link>
     </div>
-    )
-
-}
+  );
+};
