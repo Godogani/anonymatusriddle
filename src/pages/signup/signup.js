@@ -42,11 +42,11 @@ export const Signup = () => {
       <div class="container-signup">
         <div className="form">
           <div class="user-input">
-            {/*<span class="signup-identifier">Nickname</span>
+            {/*<label class="signup-identifier">Nickname</label>
             <br />
             <input type="text" name="username" id="username" required />
             <br />*/}
-            <span class="signup-identifier">E-mail</span>
+            <label class="signup-identifier">E-mail</label>
             <br />
             <input
               type="email"
@@ -58,7 +58,7 @@ export const Signup = () => {
               required
             />
             <br />
-            <span class="signup-identifier">Confirmar e-mail</span>
+            <label class="signup-identifier">Confirmar e-mail</label>
             <br />
             <input
               type="email"
@@ -70,7 +70,7 @@ export const Signup = () => {
               required
             />
             <br />
-            <span class="signup-identifier">Senha</span>
+            <label class="signup-identifier">Senha</label>
             <br />
             <input
               type="password"
@@ -82,7 +82,7 @@ export const Signup = () => {
               }}
             />
             <br />
-            <span class="signup-identifier">Confirmar senha</span>
+            <label class="signup-identifier">Confirmar senha</label>
             <br />
             <input
               type="password"

@@ -10,10 +10,10 @@ export const Login = () => {
     try {
       const user = signInWithEmailAndPassword(auth, loginEmail, loginPassword);
       console.log(user);
-      alert("Usuário Logado")
+      alert("Usuário Logado");
     } catch (err) {
       console.log(err.message);
-      alert("Erro ao logar")
+      alert("Erro ao logar");
     }
   };
 
@@ -26,7 +26,7 @@ export const Login = () => {
       <div className="container-signup">
         <div className="form">
           <div className="user-input">
-            <span className="signup-identifier"> E - mail </span> <br />
+            <label className="signup-identifier"> E-mail </label> <br />
             <input
               type="email"
               name="user-email"
@@ -36,7 +36,7 @@ export const Login = () => {
               }}
             />
             <br />
-            <span className="signup-identifier"> Senha </span> <br />
+            <label className="signup-identifier"> Senha </label> <br />
             <input
               type="password"
               name="password"
