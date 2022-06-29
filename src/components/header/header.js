@@ -70,16 +70,6 @@ export const Header = () => {
               </p>
             </Link>
           </li>
-          <li>
-            <Link to="/contact">
-              <p
-                className={`${activeTab === "Contact" ? "active" : ""}`}
-                onClick={() => setActiveTab("Contact")}
-              >
-                Contato
-              </p>
-            </Link>
-          </li>
         </ul>
       </div>
     </nav>
